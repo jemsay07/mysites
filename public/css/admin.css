@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /**
  * Navigation
  ------------------*/
@@ -55,6 +57,38 @@
 #jAdminNavWrap .nav-link.active {
   background: #266ca6;
 }
+
+#jAdminNavWrap .nav-link[data-toggle].collapsed:after {
+  content: "\F054";
+}
+
+#jAdminNavWrap .nav-link[data-toggle].collapsed:not(.collapsed):after {
+  content: "\F078";
+}
+
+#jAdminNavWrap .submenu {
+  background-color: #43494e;
+}
+
+#jAdminNavWrap .submenu .nav-link {
+  color: #e5e5e5;
+}
+
+#jAdminNavWrap .submenu .nav-link:hover,
+#jAdminNavWrap .submenu .nav-link:focus {
+  color: #69bbff;
+}
+
+#jAdminNavWrap .submenu .nav-link.current-active {
+  color: #fff;
+}
+
+/* .nav-link[data-toggle].collapsed:after {
+    content: "▾";
+}
+.nav-link[data-toggle]:not(.collapsed):after {
+    content: "▴";
+} */
 
 /**
 * Main Site Navigation

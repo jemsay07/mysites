@@ -22,7 +22,7 @@
 					<i class="fas fa-palette"></i> Appearance
 				</a>
 			</li>
-			<li class="nav-item dropdown">
+{{-- 			<li class="nav-item dropdown">
 				<a id="navUsersDropdown" href="{{ url('/users') }}" class="nav-link dropdown-toggle {{ request()->is('users*') ? 'active' : '' }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
 					<i class="fas fa-user"></i> User
 				</a>
@@ -33,6 +33,25 @@
                     <a class="dropdown-item" href="{{ url('/users/edit-profile') }}">
                        <i class="fas fa-user"></i> Edit Profile
                     </a>
+                </div>
+			</li> --}}
+			<li class="nav-item">
+				<a data-toggle="collapse" data-target="#navUsersDropdown" href="{{ url('/users') }}" class="nav-link collapsed {{ request()->is('users*') ? 'active' : '' }}" >
+					<i class="fas fa-user"></i> User
+				</a>
+                <div class="collapse" id="navUsersDropdown" aria-expanded="false">
+                	<ul class="nav flex-column py-0 submenu">
+                		<li class="nav-item">
+		                    <a class="nav-link" href="{{ url('/users') }}">
+		                       <i class="fas fa-user"></i> View Profile
+		                    </a>               			
+                		</li>
+                		<li class="nav-item">
+		                    <a class="nav-link" href="{{ url('/users/edit-profile') }}">
+		                       <i class="fas fa-user"></i> Edit Profile
+		                    </a>
+                		</li>
+                	</ul>
                 </div>
 			</li>
 			<li class="nav-item">

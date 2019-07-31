@@ -10,35 +10,65 @@
 }
 
 /**Sidebar Navigation*/
-	#jAdminNavBG,#jAdminNavWrap{
-		width: 190px;
-		background-color: #263135;
-	}
-	.sticky-menu{
-		#jAdminNavWrap{
-			position: fixed;
-		}
-	}
-	#jAdminNavBG{
-	    position: fixed;
-	    height: 100%;
-	    bottom: -12px;
-	    z-index: 1;
-	}
+#jAdminNavBG,#jAdminNavWrap{
+	width: 190px;
+	background-color: #263135;
+}
+.sticky-menu{
 	#jAdminNavWrap{
-		position: relative;
-		float: left;
-		z-index: 9990;
-		ul.nav{
-			padding:50px 0;
+		position: fixed;
+	}
+}
+#jAdminNavBG{
+    position: fixed;
+    height: 100%;
+    bottom: -12px;
+    z-index: 1;
+}
+#jAdminNavWrap{
+	position: relative;
+	float: left;
+	z-index: 9990;
+	ul.nav{
+		padding:50px 0;
+	}
+	.nav-link{
+		color: #fff;
+		&:hover,&:focus{
+		    background: #43494e;
 		}
-		.nav-link{
-			color: #fff;
-			&:hover,&:focus{
-			    background: #43494e;
-			}
-			&.active{
-				background: #266ca6;
+		&.active{
+			background: #266ca6;
+		}
+		&[data-toggle]{
+			&.collapsed{
+				&:after{
+					content: '';
+				}
+				&:not(.collapsed){
+					&:after {
+						content: '';
+					}
+				}
 			}
 		}
 	}
+	.submenu{
+		background-color: #43494e;
+		.nav-link{
+			color: #e5e5e5;
+			&:hover,&:focus{
+				color: #69bbff;
+			}
+			&.current-active{
+				color: #fff;
+			}
+		}
+	}
+}
+/* .nav-link[data-toggle].collapsed:after {
+    content: "▾";
+}
+.nav-link[data-toggle]:not(.collapsed):after {
+    content: "▴";
+} */
