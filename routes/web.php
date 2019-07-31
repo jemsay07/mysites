@@ -19,4 +19,11 @@ Route::get('/', function () {
 // Route::get( '/login', 'LoginController@index' );
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/dashboard', 'HomeController@index')->name('home');
+
+//User
+// Route::prefix('users')->group(function () {
+// 	Route::get('/users', 'UserMetaController@index');
+// });
+Route::get('/users', 'UserMetaController@index');
+Route::get('/users/edit-profile', 'UserMetaController@edit');

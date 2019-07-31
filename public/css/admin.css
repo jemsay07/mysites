@@ -1,0 +1,87 @@
+/**
+ * Navigation
+ ------------------*/
+
+/**Top Navigation*/
+
+#jAdminBard {
+  height: 32px;
+  line-height: 32px;
+  position: fixed;
+  z-index: 99999;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+/**Sidebar Navigation*/
+
+#jAdminNavBG,
+#jAdminNavWrap {
+  width: 190px;
+  background-color: #263135;
+}
+
+.sticky-menu #jAdminNavWrap {
+  position: fixed;
+}
+
+#jAdminNavBG {
+  position: fixed;
+  height: 100%;
+  bottom: -12px;
+  z-index: 1;
+}
+
+#jAdminNavWrap {
+  position: relative;
+  float: left;
+  z-index: 9990;
+}
+
+#jAdminNavWrap ul.nav {
+  padding: 50px 0;
+}
+
+#jAdminNavWrap .nav-link {
+  color: #fff;
+}
+
+#jAdminNavWrap .nav-link:hover,
+#jAdminNavWrap .nav-link:focus {
+  background: #43494e;
+}
+
+#jAdminNavWrap .nav-link.active {
+  background: #266ca6;
+}
+
+/**
+* Main Site Navigation
+-------------------------*/
+
+#jWrap {
+  height: 100%;
+  min-width: 100%;
+  position: relative;
+  width: 100%;
+}
+
+#jWrapContent,
+#jWrapFooter {
+  margin-left: 190px;
+}
+
+#jWrapContent {
+  height: 100%;
+  padding-left: 20px;
+}
+
+#jBody {
+  position: relative;
+}
+
+.jMain {
+  margin: 10px 20px 0 2px;
+}
+

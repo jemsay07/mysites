@@ -1,0 +1,44 @@
+/**Top Navigation*/
+#jAdminBard{
+    height: 32px;
+    line-height: 32px;
+    position: fixed;
+    z-index: 99999;
+    width: 100%;
+    left: 0;
+    top: 0;	
+}
+
+/**Sidebar Navigation*/
+	#jAdminNavBG,#jAdminNavWrap{
+		width: 190px;
+		background-color: #263135;
+	}
+	.sticky-menu{
+		#jAdminNavWrap{
+			position: fixed;
+		}
+	}
+	#jAdminNavBG{
+	    position: fixed;
+	    height: 100%;
+	    bottom: -12px;
+	    z-index: 1;
+	}
+	#jAdminNavWrap{
+		position: relative;
+		float: left;
+		z-index: 9990;
+		ul.nav{
+			padding:50px 0;
+		}
+		.nav-link{
+			color: #fff;
+			&:hover,&:focus{
+			    background: #43494e;
+			}
+			&.active{
+				background: #266ca6;
+			}
+		}
+	}

@@ -18,6 +18,7 @@ mix.js('resources/js/app.js', 'public/js')
     	proxy: 'http://www.sandbox.mysite.com/',
 		files: [
 			'public/css/app.css',
+			'public/css/admin.css',
 			'public/js/app.js',
 			'app/**/*',
 			'routes/**/*',
