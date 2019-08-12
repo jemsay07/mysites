@@ -40,18 +40,18 @@
 		&.active{
 			background: #266ca6;
 		}
-		&[data-toggle]{
-			&.collapsed{
-				&:after{
-					content: '';
-				}
-				&:not(.collapsed){
-					&:after {
-						content: '';
-					}
-				}
-			}
-		}
+		// &[data-toggle]{
+		// 	&.collapsed{
+		// 		&:after{
+		// 			content: '';
+		// 		}
+		// 		&:not(.collapsed){
+		// 			&:after {
+		// 				content: '';
+		// 			}
+		// 		}
+		// 	}
+		// }
 	}
 	.submenu{
 		background-color: #43494e;
@@ -66,9 +66,9 @@
 		}
 	}
 }
-/* .nav-link[data-toggle].collapsed:after {
-    content: "▾";
+/*  .nav-link[data-toggle].collapsed:after {
+   content: "▾";
 }
 .nav-link[data-toggle]:not(.collapsed):after {
-    content: "▴";
-} */
+   content: "▴";
+}  */

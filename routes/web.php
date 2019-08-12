@@ -25,5 +25,8 @@ Route::get('/dashboard', 'HomeController@index')->name('home');
 // Route::prefix('users')->group(function () {
 // 	Route::get('/users', 'UserMetaController@index');
 // });
-Route::get('/users', 'UserMetaController@index');
-Route::get('/users/edit-profile', 'UserMetaController@edit');
+Route::get('/users', 'UserMetaController@index')->name('user.index');
+Route::post('/users', 'UserMetaController@store')->name('user.store');
+Route::get('/users/create', 'UserMetaController@create')->name('user.create');
+Route::get('/users/{userMeta}/edit-profile', 'UserMetaController@edit')->name('user.edit');
+Route::put('/users/{id}', 'UserMetaController@update')->name('user.update');

@@ -58,14 +58,6 @@
   background: #266ca6;
 }
 
-#jAdminNavWrap .nav-link[data-toggle].collapsed:after {
-  content: "\F054";
-}
-
-#jAdminNavWrap .nav-link[data-toggle].collapsed:not(.collapsed):after {
-  content: "\F078";
-}
-
 #jAdminNavWrap .submenu {
   background-color: #43494e;
 }
@@ -83,12 +75,12 @@
   color: #fff;
 }
 
-/* .nav-link[data-toggle].collapsed:after {
-    content: "▾";
+/*  .nav-link[data-toggle].collapsed:after {
+   content: "▾";
 }
 .nav-link[data-toggle]:not(.collapsed):after {
-    content: "▴";
-} */
+   content: "▴";
+}  */
 
 /**
 * Main Site Navigation
@@ -117,5 +109,15 @@
 
 .jMain {
   margin: 10px 20px 0 2px;
+}
+
+/**
+* Media
+-------------------------*/
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
 }
 

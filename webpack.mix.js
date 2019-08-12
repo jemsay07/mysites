@@ -20,6 +20,7 @@ mix.js('resources/js/app.js', 'public/js')
 			'public/css/app.css',
 			'public/css/admin.css',
 			'public/js/app.js',
+			'public/js/admin-script.js',
 			'app/**/*',
 			'routes/**/*',
 			'resources/views/**/*',

@@ -39,15 +39,15 @@
 				<a data-toggle="collapse" data-target="#navUsersDropdown" href="{{ url('/users') }}" class="nav-link collapsed {{ request()->is('users*') ? 'active' : '' }}" >
 					<i class="fas fa-user"></i> User
 				</a>
-                <div class="collapse" id="navUsersDropdown" aria-expanded="false">
+                <div class="collapse {{ request()->is('users*') ? 'show' : '' }}" id="navUsersDropdown" aria-expanded="false">
                 	<ul class="nav flex-column py-0 submenu">
                 		<li class="nav-item">
-		                    <a class="nav-link" href="{{ url('/users') }}">
+		                    <a class="nav-link {{ request()->is('users') ? 'current-active' : '' }}" href="{{ route('user.index') }}">
 		                       <i class="fas fa-user"></i> View Profile
 		                    </a>               			
                 		</li>
                 		<li class="nav-item">
-		                    <a class="nav-link" href="{{ url('/users/edit-profile') }}">
+		                    <a class="nav-link {{ request()->is('users/edit-profile') ? 'current-active' : '' }}" href="{{ route('user.edit', [ 'id' => Auth::id() ]) }}">
 		                       <i class="fas fa-user"></i> Edit Profile
 		                    </a>
                 		</li>

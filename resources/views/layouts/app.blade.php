@@ -11,6 +11,10 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    @if ( Auth::check() )
+        <script src="{{ asset('js/bootstrap-datetimepicker.js') }}" defer></script>
+        <script src="{{ asset('js/admin-script.js') }}" defer></script>
+    @endif
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -18,13 +22,14 @@
 
     <!-- Styles -->
     @if ( Auth::check() )
-        <link href="{{ asset('css/admin.css') }}" rel="stylesheet">   
+        <link href="{{ asset('css/admin.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/bootstrap-datetimepicker.css') }}" rel="stylesheet">
     @endif
     
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body class="jAdmin sticky-menu">
-    <div id="jWrap">
+    <div id="app">
         @guest
             <main class="py-4">
                 @yield('form-login')
