@@ -22,11 +22,9 @@ Auth::routes();
 Route::get('/dashboard', 'HomeController@index')->name('home');
 
 //User
-// Route::prefix('users')->group(function () {
-// 	Route::get('/users', 'UserMetaController@index');
-// });
-Route::get('/users', 'UserMetaController@index')->name('user.index');
-Route::post('/users', 'UserMetaController@store')->name('user.store');
-Route::get('/users/create', 'UserMetaController@create')->name('user.create');
-Route::get('/users/{userMeta}/edit-profile', 'UserMetaController@edit')->name('user.edit');
-Route::put('/users/{id}', 'UserMetaController@update')->name('user.update');
+Route::get('/users', 'UsersMetaController@index')->name('users.index');
+Route::get('/users/create', 'UsersMetaController@create')->name('users.create');
+Route::post( '/users', 'UsersMetaController@store' )->name('users.store');
+// Route::post('/users', 'UserMetaController@store');
+// Route::get('/users/{userMeta}/edit-profile', 'UserMetaController@edit')->name('user.edit');
+// Route::put('/users/{id}', 'UserMetaController@update')->name('user.update');

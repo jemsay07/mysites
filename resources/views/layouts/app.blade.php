@@ -7,7 +7,8 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    {{-- <title>{{ config('app.name', 'Laravel') }}</title> --}}
+    <title>@yield('title')</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -21,12 +22,13 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     @if ( Auth::check() )
         <link href="{{ asset('css/admin.css') }}" rel="stylesheet">
         <link href="{{ asset('css/bootstrap-datetimepicker.css') }}" rel="stylesheet">
     @endif
     
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    
 </head>
 <body class="jAdmin sticky-menu">
     <div id="app">

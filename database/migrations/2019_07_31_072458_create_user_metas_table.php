@@ -28,7 +28,6 @@ class CreateUserMetasTable extends Migration
             /**education*/
             $table->longText('tertiary_meta'); //Array
             $table->longText('secondary_meta'); //Array
-            $table->longText('primary_meta'); //Array
             /**Skills*/
             $table->longText('skills_meta'); //Array
             /**Working-Exp*/

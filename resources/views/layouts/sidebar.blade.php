@@ -42,12 +42,14 @@
                 <div class="collapse {{ request()->is('users*') ? 'show' : '' }}" id="navUsersDropdown" aria-expanded="false">
                 	<ul class="nav flex-column py-0 submenu">
                 		<li class="nav-item">
-		                    <a class="nav-link {{ request()->is('users') ? 'current-active' : '' }}" href="{{ route('user.index') }}">
+                			{{-- {{ route('user.index') }} --}}
+		                    <a class="nav-link {{ request()->is('users') ? 'current-active' : '' }}" href="@#">
 		                       <i class="fas fa-user"></i> View Profile
 		                    </a>               			
                 		</li>
                 		<li class="nav-item">
-		                    <a class="nav-link {{ request()->is('users/edit-profile') ? 'current-active' : '' }}" href="{{ route('user.edit', [ 'id' => Auth::id() ]) }}">
+                			{{-- {{ route('user.edit', [ 'id' => Auth::id() ]) }} --}}
+		                    <a class="nav-link {{ request()->is('users/edit-profile') ? 'current-active' : '' }}" href="@#">
 		                       <i class="fas fa-user"></i> Edit Profile
 		                    </a>
                 		</li>
