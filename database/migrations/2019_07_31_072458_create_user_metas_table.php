@@ -13,7 +13,7 @@ class CreateUserMetasTable extends Migration
      */
     public function up()
     {
-        Schema::create('user_metas', function (Blueprint $table) {
+        Schema::create('users_metas', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->bigInteger('user_id');
             $table->string('first_name');
@@ -44,6 +44,6 @@ class CreateUserMetasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('user_metas');
+        Schema::dropIfExists('users_metas');
     }
 }

@@ -7,6 +7,11 @@
 
 #jWrapContent,#jWrapFooter{
 	margin-left:190px;
+	transition: all ease 0.3s;
+	&.active{
+		margin-left:0;
+		transition: all ease 0.3s;
+	}
 }
 #jWrapContent{
 	height: 100%;
@@ -88,4 +93,16 @@
     .jc-card{
     	border:0;
     }
+}
+
+/**div-table*/
+.sets_of_sm, .sets_of_skills{
+	border-bottom: 1px solid transparent;
+	padding-bottom: 1px;
+	&:nth-of-type(odd){
+		background-color: rgba(0,0,0,.05);
+	}
+	// &:nth-of-type(even){
+	// 	background-color: #e3e3e3;
+	// }
 }

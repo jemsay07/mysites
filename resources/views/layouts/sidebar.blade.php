@@ -1,6 +1,9 @@
 <div id="jWrapAdminMenu">
 	<div id="jAdminNavBG"></div>
 	<div id="jAdminNavWrap">
+		<div id="sidebarCollapse" class="position-absolute">
+			<i class="fas fa-chevron-right"></i>
+		</div>
 		<ul class="nav flex-column">
 			<li class="nav-item">
 				<a href="{{ url('/dashboard') }}" class="nav-link {{ request()->is('dashboard*') ? 'active' : '' }}">
@@ -42,14 +45,12 @@
                 <div class="collapse {{ request()->is('users*') ? 'show' : '' }}" id="navUsersDropdown" aria-expanded="false">
                 	<ul class="nav flex-column py-0 submenu">
                 		<li class="nav-item">
-                			{{-- {{ route('user.index') }} --}}
-		                    <a class="nav-link {{ request()->is('users') ? 'current-active' : '' }}" href="@#">
+		                    <a class="nav-link {{ request()->is('users') ? 'current-active' : '' }}" href="{{ route('users.index') }}">
 		                       <i class="fas fa-user"></i> View Profile
 		                    </a>               			
                 		</li>
                 		<li class="nav-item">
-                			{{-- {{ route('user.edit', [ 'id' => Auth::id() ]) }} --}}
-		                    <a class="nav-link {{ request()->is('users/edit-profile') ? 'current-active' : '' }}" href="@#">
+		                    <a class="nav-link {{ request()->is('users/edit-profile') ? 'current-active' : '' }}" href="{{ route('users.edit', [ 'id' => Auth::id() ]) }}">
 		                       <i class="fas fa-user"></i> Edit Profile
 		                    </a>
                 		</li>
@@ -57,9 +58,19 @@
                 </div>
 			</li>
 			<li class="nav-item">
-				<a href="@#" class="nav-link">
+				<a data-toggle="collapse" data-target="#navSettings" href="{{ url('/settings') }}" class="nav-link collapsed {{ request()->is('settings*') ? 'active' : '' }}">
 					<i class="fas fa-sliders-h"></i> Settings
 				</a>
+				<div class="collapse {{ request()->is('settings*') ? 'show' : '' }}" id="navSettings" aria-expanded="false">
+					<ul class="nav flex-column py-0 submenu">
+						<li class="nav-item">
+							<a class="nav-link {{ request()->is('/settings/general') ? 'current-active' : '' }}" href="{{ route('settings.edit') }}">General Settings</a>
+						</li>
+						{{-- <li class="nav-item">
+							<a href="" class="nav-link"></a>
+						</li> --}}
+					</ul>
+				</div>
 			</li>
 		</ul>
 	</div>

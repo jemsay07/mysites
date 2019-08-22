@@ -11,11 +11,7 @@
     <title>@yield('title')</title>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
-    @if ( Auth::check() )
-        <script src="{{ asset('js/bootstrap-datetimepicker.js') }}" defer></script>
-        <script src="{{ asset('js/admin-script.js') }}" defer></script>
-    @endif
+    @include('includes.script')
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -30,7 +26,7 @@
     
     
 </head>
-<body class="jAdmin sticky-menu">
+<body class="jAdmin sticky-menu auto-fold">
     <div id="app">
         @guest
             <main class="py-4">

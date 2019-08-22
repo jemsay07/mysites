@@ -3,3 +3,39 @@
 	    max-width: 1200px;
 	}
 }
+@media screen and (max-width: 782px){
+	.auto-fold{
+		#jWrapContent,#jWrapFooter{
+			margin-left: -190px;
+			&.active{
+				margin-left: 0px;
+			}
+		}
+		#jAdminBard{
+			height: auto;
+		}
+		// #jAdminNavBG,#jAdminNavWrap{
+		// 	display: none;
+		// }
+
+		#jWrapContent{
+			position: relative;
+	    	padding-left: 10px;
+	    	margin-left: 0;
+		}
+		#users-tabPill-nav{
+			position: relative;
+		}
+		#user-tabPill-content{
+			margin-left: 0;
+			.jc-card-body{
+				label{
+					text-align: left !important;
+				}
+			}
+		}
+		#sidebarCollapse{
+			top:44px;
+		}
+	}	
+}
