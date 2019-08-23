@@ -1,1 +1,11 @@
 @import 'm_query';
+
+/**Media*/
+.media-wrap{
+	.media-attachment{
+	    margin-top: 20px;
+	    position: relative;
+	    padding: 0;
+	    border: 4px dashed #cbcbcb;
+	}
+}

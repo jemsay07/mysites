@@ -34,3 +34,8 @@ Route::put('/users/{id}', 'UsersMetaController@update')->name('users.update');
 Route::get( '/settings/general', 'JcOptionsController@edit' )->name('settings.edit');
 Route::put( '/settings/general', 'JcOptionsController@update' )->name('settings.update');
 // Route::post('/settings/general/store', 'JcOptionsController@store')->name('settings.store');
+
+
+/**Media*/
+Route::get('/media', 'MediaUploadControllerController@index')->name('media.index');
+Route::post( '/media/store', 'MediaUploadControllerController@store' )->name('media.store');

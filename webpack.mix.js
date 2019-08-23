@@ -21,6 +21,7 @@ mix.js('resources/js/app.js', 'public/js')
 			'public/css/admin.css',
 			'public/js/app.js',
 			'public/js/admin-general.js',
+			'public/js/admin-media.js',
 			'public/js/admin-settings.js',
 			'public/js/admin-user.js',
 			'app/**/*',

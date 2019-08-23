@@ -12,4 +12,8 @@
 		<script src="{{ asset('js/admin-settings.js') }}" defer></script>
 	@endif
 
+	@if ( request()->is('media*') )
+		<script src="{{ asset('js/admin-media.js') }}" defer></script>
+	@endif
+
 @endif

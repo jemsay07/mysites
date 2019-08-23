@@ -16,6 +16,11 @@
 				</a>
 			</li>
 			<li class="nav-item">
+				<a href="{{ url('/media') }}" class="nav-link {{ request()->is('media*') ? 'active' : '' }}">
+					<i class="fas fa-photo-video"></i> Media
+				</a>
+			</li>
+			<li class="nav-item">
 				<a href="@#" class="nav-link">
 					<i class="fas fa-clone"></i> Page
 				</a>
